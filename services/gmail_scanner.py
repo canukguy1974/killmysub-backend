@@ -17,6 +17,11 @@ def scan_gmail_for_subscriptions(user_id: str):
 
     # Build Gmail service
     service = build("gmail", "v1", credentials=creds)
+    
+    print("REFRESH:", os.getenv("GOOGLE_REFRESH_TOKEN"))
+    print("CLIENT_ID:", os.getenv("GOOGLE_CLIENT_ID"))
+    print("CLIENT_SECRET:", os.getenv("GOOGLE_CLIENT_SECRET"))
+
 
     # Search for unsubscribe emails
     result = service.users().messages().list(userId="me", q="unsubscribe", maxResults=20).execute()
