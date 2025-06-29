@@ -1,0 +1,7 @@
+.env
+*.json
+*.pickle
+__pycache__/
+.venv/
+get_*.py
+exchange_*.py
