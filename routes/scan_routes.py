@@ -14,7 +14,7 @@ subs_collection = db["subscriptions"]
 
 @router.post("/now")
 async def scan_now(request: Request):
-    user_id = get_user_id(request)
+    user_id = "testuser@example.com"
     subs = scan_gmail_for_subscriptions(user_id)
     
     # Store in DB
