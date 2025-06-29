@@ -9,7 +9,7 @@ def scan_gmail_for_subscriptions(user_id: str):
         refresh_token=os.getenv("GOOGLE_REFRESH_TOKEN"),
         client_id=os.getenv("GOOGLE_CLIENT_ID"),
         client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
-        token_uri="https://oauth2.googleapis.com/token"
+        token_uri=os.getenv("GMAIL_TOKEN_URI")  # THIS MUST BE SET
     )
 
     # Refresh access token
